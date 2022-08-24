@@ -18,19 +18,15 @@ test('button has correct initial color', () => {
   // Find an element with a role of button and text of "Change to blue"
   const colorButton = screen.getByRole('button', { name: /Change to blue/});
 
-  expect(colorButton).toHaveStyle({ 'background-color': 'red' });
+  expect(colorButton).toHaveStyle({ 'background-color': 'MediumVioletRed' });
 });
 
-test('button has correct inital text', () => {
-  render(<App />);
-});
-
-test('button turns blue when clicked', () => {
+test('button turns Midnight Blue when clicked', () => {
   render(<App />);
   const colorButton = screen.getByRole('button', { name: /Change to blue/});
   fireEvent.click(colorButton);
   expect(colorButton).toHaveStyle({ 'background-color': 'blue'})
-  expect(colorButton.textContent).toBe('Change to red');
+  expect(colorButton.textContent).toBe('Change to MediumVioletRed');
 });
 
 test('button is disabled when checkbox is checked', () => {
@@ -45,6 +41,7 @@ test('button is disabled when checkbox is checked', () => {
   expect(colorButton).not.toBeEnabled();
 });
 
+// Tests to test functions
 describe('spaces before camel-case capital letters', function () {
   test('Works for no inner capital letters', () => {
     expect(replaceCamelWithSpaces('Red')).toBe('Red');

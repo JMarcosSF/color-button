@@ -5,9 +5,9 @@ export const replaceCamelWithSpaces =(colorName) => {
 }
 
 function App() {
-    const [buttonColor, setButtonColor] = useState('red');
+    const [buttonColor, setButtonColor] = useState('MediumVioletRed');
     const [buttonIsEnabled, setButtonIsEnabled] = useState(true);
-    const newButtonColor = buttonColor === 'red' ? 'blue' : 'red';
+    const newButtonColor = buttonColor === 'MediumVioletRed' ? 'blue' : 'MediumVioletRed';
 
     const toggleColorButtonCheckbox = () => {
         setButtonIsEnabled(!buttonIsEnabled);

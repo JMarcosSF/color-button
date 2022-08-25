@@ -26,7 +26,7 @@ test('button turns Midnight Blue when clicked', () => {
   const colorButton = screen.getByRole('button', { name: /Change to blue/});
   fireEvent.click(colorButton);
   expect(colorButton).toHaveStyle({ 'background-color': 'blue'})
-  expect(colorButton.textContent).toBe('Change to MediumVioletRed');
+  expect(colorButton).toHaveTextContent('Change to MediumVioletRed');
 });
 
 test('button is disabled when checkbox is checked', () => {
@@ -38,7 +38,7 @@ test('button is disabled when checkbox is checked', () => {
   fireEvent.click(checkbox);
 
   expect(checkbox).toBeChecked();
-  expect(colorButton).not.toBeEnabled();
+  expect(colorButton).toBeDisabled();
 });
 
 // Tests to test functions
